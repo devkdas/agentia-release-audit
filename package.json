@@ -1,0 +1,40 @@
+{
+  "name": "agentia-release-audit",
+  "version": "0.1.0",
+  "description": "Compliance audit reports aggregating stories, promotions and test evidence for Agentia CLI",
+  "author": "Kartheek Dasari",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "/dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@oclif/core": "^4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "oclif": {
+    "commands": "./dist/commands",
+    "topics": {
+      "release": {
+        "description": "Compliance audit reports for releases"
+      }
+    }
+  },
+  "keywords": [
+    "agentia",
+    "oclif-plugin",
+    "copado",
+    "compliance"
+  ]
+}
