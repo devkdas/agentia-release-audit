@@ -152,6 +152,19 @@ Exports a traceability matrix of story to data commits to tests to
 promotions to policy gate, as self contained HTML or markdown plus
 JSON. Evidence for review, never a certification.
 
+### `agentia release compare`
+
+| Flag | Description |
+|---|---|
+| `--from <file>` | Older audit JSON file (required) |
+| `--to <file>` | Newer audit JSON file (required) |
+| `-o, --output-dir <dir>` | Comparison files directory |
+| `--json` | Machine readable JSON output |
+
+Diffs two audits across time or environments with added, removed and
+status changed stories plus test regression detection. Exits nonzero
+when regressions are found, for CI gate use.
+
 At least one of `--project`, `--release` or `--job` is required. Story
 and gov sections cap at 50 plus 10 with notes when truncated.
 
