@@ -136,6 +136,22 @@ Verified live against a real Source Format project:
 Sprint counts delivered versus open by status, tracks promotions plus
 green test jobs, and writes markdown plus JSON every run.
 
+### `agentia release export`
+
+| Flag | Description |
+|---|---|
+| `-p, --project <id>` | Copado project ID scoping the export (required) |
+| `-r, --release <name>` | Release name substring filtering stories |
+| `-j, --job <id>` | CRT job ID for test evidence, repeatable |
+| `--crt-project <id>` | CRT project ID used with job IDs |
+| `--format html\|md` | Export file format (default `html`, JSON always written) |
+| `-o, --output-dir <dir>` | Export directory (default `./compliance-export`) |
+| `--json` | Machine readable stdout summary |
+
+Exports a traceability matrix of story to data commits to tests to
+promotions to policy gate, as self contained HTML or markdown plus
+JSON. Evidence for review, never a certification.
+
 At least one of `--project`, `--release` or `--job` is required. Story
 and gov sections cap at 50 plus 10 with notes when truncated.
 
