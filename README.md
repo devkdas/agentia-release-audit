@@ -120,7 +120,21 @@ Verified live against a real Source Format project:
 | `--format md\|json` | Report file format (default `md`, JSON always written) |
 | `-o, --output-dir <dir>` | Report directory (default `./release-audit`) |
 | `--ai-summary` | Release agent executive summary, off by default |
-| `-j, --json` | Machine readable stdout summary |
+| `--json` | Machine readable stdout summary |
+
+### `agentia release sprint`
+
+| Flag | Description |
+|---|---|
+| `-p, --project <id>` | Copado project ID scoping the sprint (required) |
+| `-j, --job <id>` | CRT job ID for test evidence, repeatable |
+| `--crt-project <id>` | CRT project ID used with job IDs |
+| `-o, --output-dir <dir>` | Sprint files directory (default `./sprint-report`) |
+| `--ai-narrate` | Release agent manager narrative, off by default |
+| `--json` | Machine readable stdout summary |
+
+Sprint counts delivered versus open by status, tracks promotions plus
+green test jobs, and writes markdown plus JSON every run.
 
 At least one of `--project`, `--release` or `--job` is required. Story
 and gov sections cap at 50 plus 10 with notes when truncated.
