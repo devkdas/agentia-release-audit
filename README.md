@@ -152,6 +152,19 @@ Exports a traceability matrix of story to data commits to tests to
 promotions to policy gate, as self contained HTML or markdown plus
 JSON. Evidence for review, never a certification.
 
+### `agentia release dora`
+
+| Flag | Description |
+|---|---|
+| `-p, --project <id>` | Copado project ID scoping metrics (required) |
+| `-w, --weeks <n>` | Weeks of history analyzed (default 4, 1 to 26) |
+| `--json` | Machine readable JSON output |
+
+Computes deployment frequency per week, change failure rate and median
+lead time from promotion plus story history. Unparseable dates are
+excluded with notes, and lead time reports unmeasurable without story
+to promotion linkage instead of inventing it.
+
 ### `agentia release compare`
 
 | Flag | Description |
