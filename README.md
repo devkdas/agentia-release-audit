@@ -122,6 +122,10 @@ Verified live against a real Source Format project:
 | `--ai-summary` | Release agent executive summary, off by default |
 | `--json` | Machine readable stdout summary |
 
+Stories cap at 50 with a note when truncated; live gov gates run for
+the first 10. At least one scope flag is typical: `--project` for the
+story set, `--release` to filter it, `--job` for test evidence.
+
 ### `agentia release sprint`
 
 | Flag | Description |
@@ -176,10 +180,8 @@ to promotion linkage instead of inventing it.
 
 Diffs two audits across time or environments with added, removed and
 status changed stories plus test regression detection. Exits nonzero
-when regressions are found, for CI gate use.
-
-At least one of `--project`, `--release` or `--job` is required. Story
-and gov sections cap at 50 plus 10 with notes when truncated.
+when regressions are found, for CI gate use. Both `--from` and `--to`
+are required; the run is fully offline.
 
 ## Configuration
 
